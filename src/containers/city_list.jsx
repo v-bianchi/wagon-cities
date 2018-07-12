@@ -13,12 +13,7 @@ class CityList extends Component {
 
   renderList = () => {
     return this.props.cities.map((city, index) =>
-      <City
-        name={city.name}
-        key={city.slug}
-        address={city.address}
-        imageUrl={`https://kitt.lewagon.com/placeholder/cities/${city.slug}`}
-      />
+      <City city={city} key={index} />
     )
   }
 
